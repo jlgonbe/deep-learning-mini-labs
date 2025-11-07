@@ -1,0 +1,114 @@
+# ================================
+# Python / TensorFlow Project Git Ignore
+# ================================
+
+# --- Python bytecode / cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual environments ---
+venv/
+.env/
+.venv/
+ENV/
+
+# --- Build / packaging ---
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Tool caches ---
+.mypy_cache/
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.pyre/
+.pytype/
+.hypothesis/
+.ruff_cache/
+.pylint.d/
+
+# --- Jupyter / notebooks ---
+.ipynb_checkpoints/
+
+# --- OS / editor junk ---
+.DS_Store
+*.swp
+*.swo
+
+# --- Logs / runtime artifacts ---
+logs/
+*.log
+quickruns/logs/
+*.txt
+
+# --- TensorFlow / ML artifacts ---
+# Checkpoint & SavedModel directories and tensorboard event files
+checkpoint*/
+checkpoints/
+**/checkpoint
+**/*.ckpt
+**/*.ckpt.*
+**/saved_model.pb
+saved_model*/
+**/variables/variables.*
+# TensorBoard events
+**/events.out.tfevents.*
+# Serialized datasets / records
+*.tfrecord
+*.tfrecords
+
+# --- Model exports ---
+models/
+outputs/
+artifacts/
+
+# --- Project specific ---
+quickruns/logs/
+# If later you add a directory for temporary predictions:
+quickruns/tmp/
+
+# --- Large generated predictions (keep CSV sources) ---
+*.npy
+*.npz
+dataset_orig*.csv
+trainpred*.csv
+testpred*.csv
+
+# --- Security / environment files ---
+.env.local
+.env.*
+*.secret
+secret*/
+
+# --- Ignore generated images (keep raw dataset under data/) ---
+**/generated_images/
+
+# --- Wheel / build metadata ---
+*.whl
+
+# --- Optional: comment out if you DO want exact pinned freeze ---
+# requirements-freeze.txt
+
+# --- Misc ML experiment trackers (uncomment if used) ---
+# wandb/
+# mlruns/
+# comet-ml/
+
+# --- Node / front-end accidental additions ---
+node_modules/
+
+# --- Cache from keras preprocessing ---
+.cache/
+
+# --- Coverage XML or reports ---
+coverage.xml
+
+# ================================
+# End of file
+# ================================
